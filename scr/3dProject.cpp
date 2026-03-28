@@ -164,7 +164,7 @@ struct HyperbolaParabola {
 			}
 		}
 		ofstream outPosition;
-		outPosition.open("HyperbolaParabolaPosition.txt");
+		outPosition.open("E:/Code/Github/3D-Engine/3D model/HyperbolaParabolaPosition.txt");
 		for (int i = 0; i < position.size(); i++) {
 			outPosition << position[i].getX() << " " << position[i].getY() << " " << position[i].getZ() << endl;
 		}
@@ -173,7 +173,7 @@ struct HyperbolaParabola {
 
 	void setPosition() {
 		ifstream inPosition;
-		inPosition.open("HyperbolaParabolaPosition.txt");
+		inPosition.open("E:/Code/Github/3D-Engine/3D model/HyperbolaParabolaPosition.txt");
 		string temp;
 		int num = 0;
 		while (getline(inPosition, temp)) {
@@ -181,7 +181,7 @@ struct HyperbolaParabola {
 		}
 		inPosition.close();
 		int x, y, z;
-		inPosition.open("HyperbolaParabolaPosition.txt");
+		inPosition.open("E:/Code/Github/3D-Engine/3D model/HyperbolaParabolaPosition.txt");
 		for (int i = 0; i < num; i++) {
 			inPosition >> x >> y >> z;
 			position.push_back(Vector3(x, y, z));
@@ -228,7 +228,7 @@ struct Elliptical {
 			}
 		}
 		ofstream outPosition;
-		outPosition.open("EllipticalPosition.txt");
+		outPosition.open("E:/Code/Gittub/3D-Engine/3D model/EllipticalPosition.txt");
 		for (int i = 0; i < position.size(); i++) {
 			outPosition << position[i].getX() << " " << position[i].getY() << " " << position[i].getZ() << endl;
 		}
@@ -237,7 +237,7 @@ struct Elliptical {
 
 	void setPosition() {
 		ifstream inPosition;
-		inPosition.open("EllipticalPosition.txt");
+		inPosition.open("E:/Code/Gittub/3D-Engine/3D model/EllipticalPosition.txt");
 		string temp;
 		int num = 0;
 		while (getline(inPosition, temp)) {
@@ -245,7 +245,7 @@ struct Elliptical {
 		}
 		inPosition.close();
 		int x, y, z;
-		inPosition.open("EllipticalPosition.txt");
+		inPosition.open("E:/Code/Gittub/3D-Engine/3D model/EllipticalPosition.txt");
 		for (int i = 0; i < num; i++) {
 			inPosition >> x >> y >> z;
 			position.push_back(Vector3(x, y, z));
@@ -292,7 +292,7 @@ struct Hyperbocured {
 			}
 		}
 		ofstream outPosition;
-		outPosition.open("HyperbocuredPosition.txt");
+		outPosition.open("E:/Code/Github/3D-Engine/3D model/HyperbocuredPosition.txt");
 		for (int i = 0; i < position.size(); i++) {
 			outPosition << position[i].getX() << " " << position[i].getY() << " " << position[i].getZ() << endl;
 		}
@@ -301,7 +301,7 @@ struct Hyperbocured {
 
 	void setPosition() {
 		ifstream inPosition;
-		inPosition.open("HyperbocuredPosition.txt");
+		inPosition.open("E:/Code/Github/3D-Engine/3D model/HyperbocuredPosition.txt");
 		string temp;
 		int num = 0;
 		while (getline(inPosition, temp)) {
@@ -309,7 +309,7 @@ struct Hyperbocured {
 		}
 		inPosition.close();
 		int x, y, z;
-		inPosition.open("HyperbocuredlPosition.txt");
+		inPosition.open("E:/Code/Github/3D-Engine/3D model/HyperbocuredPosition.txt");
 		for (int i = 0; i < num; i++) {
 			inPosition >> x >> y >> z;
 			position.push_back(Vector3(x, y, z));
@@ -607,9 +607,6 @@ int main() {
 	camera myCamera;
 	myCamera.setPosition(50, 0, 0);
 	
-	
-
-
 	//myCamera.setBase(Vector3(cosf(-Pi / 4), sinf(-Pi / 4), 0), Vector3(cosf(-Pi / 4 + Pi / 2), sinf(-Pi / 4 + Pi / 2), 0), Vector3(0, 0, 1));
 	myCamera.setBase(Vector3(-1, 0, 0), Vector3(0, 1, 0), Vector3(0, 0, 1));
 
